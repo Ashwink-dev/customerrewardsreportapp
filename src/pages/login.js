@@ -9,6 +9,7 @@ const Login = (props) => {
         event.preventDefault()
         if (Email === '' || password === '') {
             alert("Please enter all fields !!!!")
+            // eslint-disable-next-line
         } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Email) === false) {
             alert('Please enter a valid Email')
             setEmail('')
@@ -29,9 +30,9 @@ const Login = (props) => {
             })
         }
     }
-    return (<section class="mt85">
-        <div class="main">
-            <div class="login">
+    return (<section className="mt85">
+        <div className="main">
+            <div className="login">
                 <form>
                     <label for="chk" aria-hidden="true">Login</label>
                     <input type="email" name="email" placeholder="Email" value={Email} onChange={(event) => setEmail(event.target.value)} required />

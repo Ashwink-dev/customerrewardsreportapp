@@ -5,13 +5,13 @@ import React  from "react";
 const Footer = (props) => {
 
     return( <footer>
-        <div class="internalcontainer">
-            <div class="logowrapper">
+        <div className="internalcontainer">
+            <div className="logowrapper">
                 <h3>Assignment</h3>
                 <address>Kitchener <br /> N2M 5H3</address>
             </div>
-            <div class="footerlinks">
-                <div class="links">
+            <div className="footerlinks">
+                <div className="links">
                     <h3>Resources</h3>
                     <ul>
                         <li><a href="#">About</a></li>
@@ -22,7 +22,7 @@ const Footer = (props) => {
                         <li><a href="#">Help Center</a></li>
                     </ul>
                 </div>
-                <div class="links">
+                <div className="links">
                     <h3>Legal</h3>
                     <ul>
                         <li><a href="#">Terms Of Use</a></li>
@@ -30,7 +30,7 @@ const Footer = (props) => {
                         <li><a href="#">Security</a></li>
                     </ul>
                 </div>
-                <div class="links">
+                <div className="links">
                     <h3>Account</h3>
                     <ul>
                         <li><a href="#">My Account</a></li>
@@ -42,12 +42,12 @@ const Footer = (props) => {
                     </ul>
                 </div>
             </div>
-            <div class="subscribeletter">
+            <div className="subscribeletter">
                 <h3>Newsletter</h3>
                 <p>Subscribe to our newsletter system now
                     to get latest news from us.</p>
                 <form>
-                    <input type="text" value="" placeholder="Email.." required />
+                    <input type="text" value="" placeholder="Email.." required readOnly />
                     <input type="submit" value="send" />
                 </form>
             </div>

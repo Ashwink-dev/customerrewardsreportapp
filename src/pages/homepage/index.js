@@ -23,8 +23,8 @@ const HomePage = (props) => {
     const fetchCustomerTransactions = (username) => {
         APIWrapper('GET', `customertransactions?username=${username}`).then((response) => {
             if (response.status === 200) {
-                if (response.data) {
-                    let transactions = response.data.transactions
+                if (response.data.length) {
+                    let transactions = response.data[0].transactions
                         .map((details) => Object.assign({ ...details, transactionMonth: moment(details.transactionDate).format('MMMM YYYY'), rewardPoints: calculateRewards(details.spent) })) // Calculate Reward Based On Transaction Rate
                         .filter((details) => moment(details.transactionDate).isBetween(moment().subtract(3, 'months'), moment(), undefined, '[]')) // Filtering last 3 months transaction 
                     const TotalAmountSpent = transactions.reduce((accumulator, object) => accumulator + object.spent, 0); // calculating total spent by customer
@@ -50,21 +50,26 @@ const HomePage = (props) => {
         </div>
         <h2 className="tableTitle">Transaction &amp; Reward Points Data - Month Wise</h2>
         <table id="customers" style={{ width: '40%' }}>
+        <thead>
             <tr>
                 <th>S. No</th>
                 <th>Transaction Month</th>
                 <th>Total Reward Points</th>
             </tr>
+        </thead>
+            <tbody>
             {customerTransactionMonthWise.map((transaction, index) => {
                 return (<tr key={index + 1}>
                     <td>{index + 1}</td>
                     <td>{transaction.transactionMonth}</td>
-                    <td style={{ textAlign: 'right' }}>{transaction.rewardPoints}</td>
+                    <td className="textAlignRight">{transaction.rewardPoints}</td>
                 </tr>)
             })}
+            </tbody>
         </table>
         <h2 className="tableTitle">Transaction &amp; Reward Points Data - Day Wise</h2>
         <table id="customers">
+        <thead>
             <tr>
                 <th>Transaction ID</th>
                 <th>Transaction Name</th>
@@ -73,16 +78,19 @@ const HomePage = (props) => {
                 <th>Transaction Date</th>
                 <th>Transaction Type</th>
             </tr>
+        </thead>
+            <tbody>
             {customerTransactions.map((transaction) => {
                 return (<tr key={transaction.transactionId}>
                     <td>{transaction.transactionId}</td>
                     <td>{transaction.transactionName}</td>
-                    <td>$ {transaction.spent}</td>
-                    <td>{transaction.rewardPoints}</td>
+                    <td className="textAlignRight">$ {transaction.spent}</td>
+                    <td className="textAlignRight">{transaction.rewardPoints}</td>
                     <td>{transaction.transactionDate}</td>
                     <td>{transaction.transactionType}</td>
                 </tr>)
             })}
+            </tbody>
         </table>
     </div >
     )

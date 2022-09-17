@@ -1,14 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useState } from "react";
+
+import React from "react";
 
 const Header = (props) => {
-    const [isloggedIn, updateisloggedIn] = useState(localStorage.getItem('isLoggedIn') ? true : false)
 
 
     return (<header>
         <nav>
-            <a class="logo" href="/">
+            <a className="logo" href="/">
                 <h3>Assignment</h3>
             </a>
             <ul>
@@ -22,7 +20,7 @@ const Header = (props) => {
                     <a href="/about">About Us</a>
                 </li>
                 <li>
-                    <button type="button" class="loginbtn">Login</button>
+                    <button type="button" className="loginbtn">Login</button>
                 </li>
             </ul>
         </nav>

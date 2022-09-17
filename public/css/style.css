@@ -493,3 +493,7 @@ button:hover{
   .tableTitle {
     text-align: center;
   }
+
+  .textAlignRight {
+    text-align: right;
+  }
