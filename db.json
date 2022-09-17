@@ -1,0 +1,111 @@
+{
+    "users": [
+        {
+            "userId": 1,
+            "username": "John",
+            "password": "Password@1234",
+            "email": "john@gmail.com"
+        },
+        {
+            "userId": 2,
+            "username": "Doe",
+            "password": "Password@1234",
+            "email": "doe@gmail.com"
+        },
+        {
+            "userId": 3,
+            "username": "Daby",
+            "password": "Password@1234",
+            "email": "daby@gmail.com"
+        }
+    ],
+    "customertransactions": {
+     "username": "John",
+     "transactions": [
+            {
+                "transactionId": 1,
+                "transactionName": "Purchased House Insurance",
+                "spent": 70,
+                "transactionType": "VISA",
+                "transactionDate": "17-Jun-2022"
+            },
+            {
+                "transactionId": 2,
+                "transactionName": "Purchased Movie Tickets",
+                "spent": 150,
+                "transactionType": "CASH",
+                "transactionDate": "02-July-2022"
+            },
+            {
+                "transactionId": 3,
+                "transactionName": "Auto Debit - Rent",
+                "spent": 1200,
+                "transactionType": "VISA",
+                "transactionDate": "16-Aug-2022"
+            },
+            {
+                "transactionId": 4,
+                "transactionName": "Purchased Pizza",
+                "spent": 25,
+                "transactionType": "MASTER CARD",
+                "transactionDate": "02-Jun-2022"
+            },
+            {
+                "transactionId": 5,
+                "transactionName": "Purchased GAS",
+                "spent": 80,
+                "transactionType": "VISA",
+                "transactionDate": "06-July-2022"
+            },
+            {
+                "transactionId": 6,
+                "transactionName": "Purchased Iphone",
+                "spent": 700,
+                "transactionType": "MASTER CARD",
+                "transactionDate": "20-Aug-2022"
+            },
+            {
+                "transactionId": 7,
+                "transactionName": "Purchased Snacks",
+                "spent": 20,
+                "transactionType": "CASH",
+                "transactionDate": "23-Jun-2022"
+            },
+            {
+                "transactionId": 8,
+                "transactionName": "Purchased Iwatch",
+                "spent": 400,
+                "transactionType": "VISA",
+                "transactionDate": "27-Aug-2022"
+            },
+            {
+                "transactionId": 9,
+                "transactionName": "Purchased Winter Tyre",
+                "spent": 15,
+                "transactionType": "CASH",
+                "transactionDate": "01-Aug-2022"
+            },
+            {
+                "transactionId": 10,
+                "transactionName": "AutoDebit - Internet",
+                "spent": 39,
+                "transactionType": "MASTER CARD",
+                "transactionDate": "01-Jul-2022"
+            },
+            {
+                "transactionId": 11,
+                "transactionName": "Purchased Winter Tyre",
+                "spent": 15,
+                "transactionType": "CASH",
+                "transactionDate": "01-May-2022"
+            },
+            {
+                "transactionId": 12,
+                "transactionName": "AutoDebit - Internet",
+                "spent": 39,
+                "transactionType": "MASTER CARD",
+                "transactionDate": "01-April-2022"
+            }
+        ]
+    }
+}
